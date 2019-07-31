@@ -1,0 +1,133 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>VoizFonica SignUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- Custom Theme files -->
+    <link href="css/register.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- //web font -->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- main -->
+<div class="main-w3layouts wrapper">
+    <h1>VoizFonica SignUp</h1>
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            <form th:action="@{/register}" method="post" th:object="${register}">
+                <div th:if="${#fields.hasErrors()}">
+        <span class="validationError">
+			<label> Re-enter information again</label>
+        </span>
+                </div>
+                <!--<input class="text" type="text" name="Username" placeholder="Username" required="">-->
+
+                <!--
+                                <label for = "Username">Username</label>
+                -->
+
+                <input type="text" id="Username" class="text" name="Username" placeholder="Username*"
+                       th:field="*{name}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('name')}"
+                      th:errors="*{name}">Name Error</span>
+
+                <!--
+                                <label for = "email">email</label>
+                -->
+                <input type="text" id="email" class="text email" name="email" placeholder="Email" value="hello"
+                       th:field="*{email}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('email')}"
+                      th:errors="*{email}">Enter the correct email format</span>
+                <!--
+                                <label for = "password">password</label>
+                -->
+
+                <!--<input class="text email" type="email" name="email" placeholder="Email" required="">-->
+                <input class="text" id="password" type="password" name="password" placeholder="Password"
+                       th:field="*{password}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('password')}"
+                      th:errors="*{password}">Enter a password</span>
+
+                <!--
+                                <label for = "cpassword">Confirm password</label>
+                -->
+
+                <input class="text w3lpass" id="cpassword" type="password" name="cpassword"
+                       placeholder="Confirm Password" th:field="*{cpassword}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('cpassword')}"
+                      th:errors="*{cpassword}">Enter a password</span>
+
+                <div class="wthree-text">
+                    <label class="anim">
+                        <input type="checkbox" class="checkbox" required="">
+                        <span>I Agree To The Terms & Conditions</span>
+                    </label>
+                    <div class="clear"></div>
+                </div>
+                <input type="submit" value="SIGNUP">
+            </form>
+            <p>Have an Account? <a href="login.html"> Login Now!</a></p>
+        </div>
+    </div>
+    <!-- copyright -->
+    <div class="colorlibcopy-agile">
+        <p>© 2019 VoizFonica All rights reserved </p>
+    </div>
+    <!-- //copyright -->
+    <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!-- //main -->
+<div class="content">
+</div>
+<footer id="myFooter">
+    <div class="container">
+    </div>
+    <div class="social-networks">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="email"><i class="fa fa-envelope-o"></i></a>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>© 2019 Copyright Voizfonica </p>
+    </div>
+</footer>
+</body>
+</html>

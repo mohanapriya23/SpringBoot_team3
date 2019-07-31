@@ -1,6 +1,6 @@
-package com.example.paymentmodule;
-import com.example.paymentmodule.Payment;
-import com.example.paymentmodule.data.PaymentRepository;
+package com.example.voizfonica.controller;
+import com.example.voizfonica.model.Payment;
+import com.example.voizfonica.data.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,9 +1,8 @@
-package com.example.paymentmodule;
+package com.example.voizfonica.model;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.CreditCardNumber;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
